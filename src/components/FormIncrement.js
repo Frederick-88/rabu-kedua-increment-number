@@ -4,7 +4,7 @@ import styled from "styled-components";
 class Increment extends React.Component {
   // FUNCTION
   state = {
-    number: 0,
+    number: 1,
   };
 
   AddItem = () => {
@@ -31,9 +31,9 @@ class Increment extends React.Component {
       height: 50px;
       font-size: 20px;
       color: palevioletred;
-      text-weight:bold;
-      text-align:center;
-      margin:20px;
+      text-weight: bold;
+      text-align: center;
+      margin: 20px;
       outline: palevioletred solid 5px;
     `;
 
@@ -48,16 +48,17 @@ class Increment extends React.Component {
     `;
 
     return (
-      <Container>
+      <div>
         <Container>
-          <span>
-            <Button onClick={this.AddItem}>+</Button>
-            <Input value={this.state.number}></Input>
-            <Button onClick={this.DecreaseItem}>-</Button>
-          </span>
+          <Button onClick={this.AddItem}>+</Button>
+          <Input value={this.state.number}></Input>
+          <Button onClick={this.DecreaseItem}>-</Button>
         </Container>
-        <Button onClick={this.ResetItem}>Reset</Button>
-      </Container>
+        
+        <Container>
+          <Button onClick={this.ResetItem}>Reset</Button>
+        </Container>
+      </div>
     );
   }
 }
