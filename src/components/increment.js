@@ -21,7 +21,6 @@ class Increment extends React.Component{
         return (
             <Container>
             <Image src={logo} alt="logo" />
-            "tes"
         </Container>
       )
 
